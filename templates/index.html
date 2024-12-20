@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+</head>
+<body>
+    <h1>Accueil</h1>
+    
+    {% if logged_in %}
+        <p>Bienvenue, {{ username }} !</p>
+        <ul>
+            <li><a href="vote">Voter</a></li>
+            <li><a href="logout">Se déconnecter</a></li>
+        </ul>
+    {% else %}
+        <p>Vous n'êtes pas connecté.</p>
+        <ul>
+            <li><a href="login">Se connecter</a></li>
+            <li><a href="signin">S'inscrire</a></li>
+        </ul>
+    {% endif %}
+</body>
+</html>

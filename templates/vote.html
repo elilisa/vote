@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote pour ton compositeur préféré</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            max-width: 400px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        h2 {
+            text-align: center;
+            color: #ff0000;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin: 10px 0 5px;
+            color: #555;
+        }
+        input[type="email"], select, button {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Symphonie Sanglante</h1>
+        <h2>!!! Vote pour le survivant !!!</h2>
+        <form action="/vote" method="POST">
+            <label for="email">Adresse mail :</label>
+            <input type="email" id="email" name="email" placeholder="Entrez votre mail" required>
+
+            <label for="composer">Choisi ton compositeur :</label>
+            <select id="composer" name="composer" required>
+                <option value="">-- Sélectionne ton compositeur --</option>
+                <option value="Bach">Bach</option>
+                <option value="Mozart">Mozart</option>
+                <option value="Beethoven">Beethoven</option>
+                <option value="Chopin">Chopin</option>
+            </select>
+
+            <button type="submit">Voter</button>
+        </form>
+    </div>
+</body>
+</html>
